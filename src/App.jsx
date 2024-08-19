@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import WeatherBox from "./component/Weather.jsx";
 import WeatherBtn from "./component/WeatherBtn.jsx";
 import cities from "./data/cities.jsx";
+import { Header } from "./component/Header.jsx";
 import { ClipLoader } from "react-spinners";
 import "./global.scss";
 
@@ -83,6 +84,7 @@ const App = () => {
             <p>{apiError}</p>
           ) : (
             <>
+              <Header />
               <WeatherBox weather={weather} />
               <WeatherBtn
                 cities={cities}
