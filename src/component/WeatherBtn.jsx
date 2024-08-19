@@ -1,15 +1,28 @@
 import React from "react";
 
-const WeatherBtn = (props) => {
+const WeatherBtn = ({ cities, selectedCity, handleCityChange }) => {
   return (
-    <div>
-      {props.cities.map((item, index) => {
-        return (
-          <button key={index} onClick={() => props.setCity(item)}>
-            {item}
-          </button>
-        );
-      })}
+    <div className="main-container">
+      <button
+        className={`button ${
+          selectedCity === null ? "button-selected" : "button-outline-warning"
+        }`}
+        onClick={() => handleCityChange("current")}
+      >
+        현재 위치
+      </button>
+
+      {cities.map((city, index) => (
+        <button
+          key={index}
+          className={`button ${
+            selectedCity === city ? "button-selected" : "button-outline-warning"
+          }`}
+          onClick={() => handleCityChange(city)}
+        >
+          {city}
+        </button>
+      ))}
     </div>
   );
 };

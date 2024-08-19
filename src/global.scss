@@ -32,3 +32,37 @@ body {
     padding: 5px 0;
   }
 }
+
+.button {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-outline-warning {
+  border-color: #ffc107;
+  color: #ffc107;
+  background-color: transparent;
+}
+
+.button-warning {
+  border-color: #ffc107;
+  color: #fff;
+  background-color: #ffc107;
+}
+
+.button-warning:hover {
+  background-color: #e0a800;
+}
+
+.button-selected {
+  border-color: #ffc107;
+  color: #fff;
+  background-color: #ffc107;
+}
