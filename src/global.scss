@@ -72,3 +72,10 @@ body {
   color: #fff;
   background-color: #ffc107;
 }
+
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+  }
+}
