@@ -1,11 +1,15 @@
 import React from "react";
 
-const WeatherBtn = () => {
+const WeatherBtn = (props) => {
   return (
     <div>
-      <button onClick={() => {}}>일본</button>
-      <button>러시아</button>
-      <button>제주도</button>
+      {props.cities.map((item, index) => {
+        return (
+          <button key={index} onClick={() => props.setCity(item)}>
+            {item}
+          </button>
+        );
+      })}
     </div>
   );
 };
